@@ -29,8 +29,8 @@ from io import StringIO
 
 with st.sidebar:
   selected = option_menu("CHOOSE",
-                         ['NEW DATA SET',
-                          'EXISTING'])
+                         ['EXISTING',
+                          'NEW DATA SET'])
 if(selected == 'EXISTING'):
   st.title('Prediction')
   col1,col2,col3,col4,col5 = st.columns(5)
