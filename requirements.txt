@@ -3,6 +3,6 @@ matplotlib            3.7.1
 seaborn               0.12.2
 sklearn               0.0.post1
 metric-learn          0.6.2
-joblib                1.2.0
+plotly                5.13.1
 streamlit             1.20.0
 streamlit-option-menu 0.3.2
