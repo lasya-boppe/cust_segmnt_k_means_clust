@@ -31,21 +31,6 @@ with st.sidebar:
   selected = option_menu("CHOOSE",
                          ['NEW DATA SET',
                           'EXISTING'])
-if (selected == 'NEW DATA SET'):
-  st.title('Upload the .csv file')
-  st.warning('the .csv file must contain columns as CustomerID, Gender, Age, score,income only')
-  uploaded_file = st.file_uploader('choose file')
-  if uploaded_file is not None:
-    byte_data = uploaded_file.getvalue()
-    st.write(byte_data)
-
-    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
-    st.write(stringio)
-
-    string_data = string.read()
-    st.write(string_data)
-
-    new_df = pd.read_csv(uploaded_file)
 if(selected == 'EXISTING'):
   st.title('Prediction')
   col1,col2,col3,col4,col5 = st.columns(5)
@@ -90,3 +75,19 @@ if(selected == 'EXISTING'):
       st.write('they EARN High & SPEND Low')
       st.write('SO you can --------')
       st.balloons()
+        
+if (selected == 'NEW DATA SET'):
+  st.title('Upload the .csv file')
+  st.warning('the .csv file must contain columns as CustomerID, Gender, Age, score,income only')
+  uploaded_file = st.file_uploader('choose file')
+  if uploaded_file is not None:
+    byte_data = uploaded_file.getvalue()
+    st.write(byte_data)
+
+    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+    st.write(stringio)
+
+    string_data = string.read()
+    st.write(string_data)
+
+    new_df = pd.read_csv(uploaded_file)
